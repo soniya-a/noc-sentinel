@@ -1,0 +1,97 @@
+{
+  "experiment_id": "exp_n7_20261018_132030",
+  "timestamp": "20261018_132030",
+  "target_node": 7,
+  "mesh_dimensions": [
+    4,
+    4
+  ],
+  "configuration": {
+    "mesh_width": 4,
+    "mesh_height": 4,
+    "target_node": 7,
+    "attack_modes": [
+      "BLACKHOLE",
+      "SELECTIVE_FORWARDING",
+      "GRAYHOLE",
+      "ROUTING_MANIPULATION",
+      "DESTINATION_TAMPERING"
+    ],
+    "simulation_cycles": 5000,
+    "warmup_cycles": 1000,
+    "pir": 0.01,
+    "seed": 101,
+    "backup_node": 2
+  },
+  "core_matrix_runs_count": 11,
+  "runs": {
+    "baseline": {
+      "exit_code": 0,
+      "duration_s": 0.117,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/baseline.log"
+    },
+    "blackhole_n7_attack": {
+      "exit_code": 0,
+      "duration_s": 0.119,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/blackhole_n7_attack.log"
+    },
+    "blackhole_n7_mitigated": {
+      "exit_code": 0,
+      "duration_s": 0.167,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/blackhole_n7_mitigated.log"
+    },
+    "selective_forwarding_n7_attack": {
+      "exit_code": 0,
+      "duration_s": 0.116,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/selective_forwarding_n7_attack.log"
+    },
+    "selective_forwarding_n7_mitigated": {
+      "exit_code": 0,
+      "duration_s": 0.115,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/selective_forwarding_n7_mitigated.log"
+    },
+    "grayhole_n7_attack": {
+      "exit_code": 0,
+      "duration_s": 0.116,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/grayhole_n7_attack.log"
+    },
+    "grayhole_n7_mitigated": {
+      "exit_code": 0,
+      "duration_s": 0.115,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/grayhole_n7_mitigated.log"
+    },
+    "routing_manipulation_n7_attack": {
+      "exit_code": 0,
+      "duration_s": 0.116,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/routing_manipulation_n7_attack.log"
+    },
+    "routing_manipulation_n7_mitigated": {
+      "exit_code": 0,
+      "duration_s": 0.166,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/routing_manipulation_n7_mitigated.log"
+    },
+    "destination_tampering_n7_attack": {
+      "exit_code": 0,
+      "duration_s": 0.166,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/destination_tampering_n7_attack.log"
+    },
+    "destination_tampering_n7_mitigated": {
+      "exit_code": 0,
+      "duration_s": 0.166,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/destination_tampering_n7_mitigated.log"
+    },
+    "policy_n7_dst_remap_b2": {
+      "exit_code": 0,
+      "duration_s": 0.116,
+      "log": "/home/soniya/noxim/sentinel/runs/exp_n7_20261018_132030/policy_n7_dst_remap_b2.log",
+      "optional": true
+    }
+  },
+  "status": "COMPLETED",
+  "audit": {
+    "exit_code": 0,
+    "duration_s": 0.117,
+    "stdout": "runs analysed: 12  path violations: 440\nbaseline                                   deliv%=   100.0 drop=   0 mis=   0 risk=0/0 viol=0 match=True hook= path= dest= \nblackhole_n7_attack                        deliv%=  90.543 drop=  82 mis=   0 risk=0/54 viol=82 match=True hook= path= dest= \nblackhole_n7_mitigated                     deliv%=   100.0 drop=   0 mis=   0 risk=54/54 viol=0 match=True hook=YES path=VERIFIED dest=VERIFIED \ndestination_tampering_n7_attack            deliv%=  90.543 drop=   0 mis=  81 risk=0/54 viol=112 match=True hook= path= dest= \ndestination_tampering_n7_mitigated         deliv%=   100.0 drop=   0 mis=   0 risk=54/54 viol=0 match=True hook=YES path=VERIFIED dest=VERIFIED \ngrayhole_n7_attack                         deliv%=  97.548 drop=  21 mis=   0 risk=40/54 viol=82 match=True hook= path= dest= \ngrayhole_n7_mitigated                      deliv%=   100.0 drop=   0 mis=   0 risk=54/54 viol=0 match=True hook=YES path=VERIFIED dest=VERIFIED \npolicy_n7_dst_remap_b2                     deliv%=   100.0 drop=   0 mis=   0 risk=54/54 viol=0 match=True hook=YES path=VERIFIED dest=VERIFIED \nrouting_manipulation_n7_attack             deliv%=   100.0 drop=   0 mis=   0 risk=54/54 viol=82 match=True hook= path= dest= \nrouting_manipulation_n7_mitigated          deliv%=   100.0 drop=   0 mis=   0 risk=54/54 viol=0 match=True hook=YES path=VERIFIED dest=VERIFIED \nselective_forwarding_n7_attack             deliv%=  96.848 drop=  28 mis=   0 risk=36/54 viol=82 match=True hook= path= dest= \nselective_forwarding_n7_mitigated          deliv%=   100.0 drop=   0 mis=   0 risk=54/54 viol=0 match=True hook=YES path=VERIFIED dest=VERIFIED \n",
+    "stderr": ""
+  }
+}

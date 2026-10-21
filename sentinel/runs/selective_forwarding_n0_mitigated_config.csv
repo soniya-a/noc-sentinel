@@ -1,0 +1,15 @@
+key,value
+mal_node,0
+attack,SELECTIVE_FORWARDING
+mitigation,1
+src_policy,QUARANTINE
+dst_policy,QUARANTINE
+backup_node,-1
+decouple_rng,1
+mesh_dim_x,4
+mesh_dim_y,4
+routing,XY
+seed,101
+reset_cycles,1000
+warmup_cycles,1000
+sim_cycles,5000

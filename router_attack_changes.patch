@@ -1,0 +1,85 @@
+diff --git a/src/Router.cpp b/src/Router.cpp
+index 9b6f885..8892612 100644
+--- a/src/Router.cpp
++++ b/src/Router.cpp
+@@ -9,6 +9,16 @@
+  */
+ 
+ #include "Router.h"
++#include <cstdlib>
++
++static std::string NOXIM_ATTACK =
++    getenv("NOXIM_ATTACK") ? getenv("NOXIM_ATTACK") : "";
++
++static int NOXIM_MAL_NODE =
++    getenv("NOXIM_MAL_NODE") ? atoi(getenv("NOXIM_MAL_NODE")) : -1;
++
++static int NOXIM_ATTACK_LOG = 0;
++
+ 
+ 
+ inline int toggleKthBit(int n, int k)
+@@ -57,7 +67,22 @@ void Router::rxProcess()
+ 		{
+ 
+ 		    // Store the incoming flit in the circular buffer
+-		    buffer[i][vc].Push(received_flit);
++		    bool attack_drop = false;
++
++if (local_id == NOXIM_MAL_NODE &&
++    i != DIRECTION_LOCAL &&
++    received_flit.dst_id != local_id &&
++    NOXIM_ATTACK == "BLACKHOLE")
++{
++    attack_drop = true;
++
++    if (NOXIM_ATTACK_LOG++ < 20)
++        cout << "BLACKHOLE: dropping flit at node "
++             << local_id << endl;
++}
++
++if (!attack_drop)
++    buffer[i][vc].Push(received_flit);
+ 		    LOG << " Flit " << received_flit << " collected from Input[" << i << "][" << vc <<"]" << endl;
+ 
+ 		    power.bufferRouterPush();
+@@ -198,8 +223,6 @@ void Router::txProcess()
+ 	      {
+ 		  // power contribution already computed in 1st phase
+ 		  Flit flit = buffer[i][vc].Front();
+-		  //LOG<< "*****TX***Direction= "<<i<< "************"<<endl;
+-		  //LOG<<"_cl_tx="<<current_level_tx[o]<<"req_tx="<<req_tx[o].read()<<" _ack= "<<ack_tx[o].read()<< endl;
+ 		  
+ 		  if ( (current_level_tx[o] == ack_tx[o].read()) &&
+ 		       (buffer_full_status_tx[o].read().mask[vc] == false) ) 
+@@ -484,6 +507,30 @@ int Router::route(const RouteData & route_data)
+     power.routing();
+     vector < int >candidate_channels = routingFunction(route_data);
+ 
++if (NOXIM_ATTACK == "ROUTING_MANIPULATION" &&
++    local_id == NOXIM_MAL_NODE &&
++    candidate_channels.size() == 1)
++{
++    int d = candidate_channels[0];
++
++    int y = local_id / GlobalParams::mesh_dim_x;
++
++    if (d == DIRECTION_EAST || d == DIRECTION_WEST)
++    {
++        int alt =
++            (y + 1 < GlobalParams::mesh_dim_y)
++            ? DIRECTION_SOUTH
++            : DIRECTION_NORTH;
++
++        candidate_channels[0] = alt;
++
++        if (NOXIM_ATTACK_LOG++ < 20)
++            cout << "ROUTING_MANIPULATION: node "
++                 << local_id << " rerouted "
++                 << d << " -> " << alt << endl;
++    }
++}
++
+     power.selection();
+     return selectionFunction(candidate_channels, route_data);
+ }

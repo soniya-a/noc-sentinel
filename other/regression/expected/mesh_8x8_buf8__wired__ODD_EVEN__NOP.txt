@@ -1,0 +1,13 @@
+Noxim simulation completed. (11000 cycles executed)
+
+% Total received packets: 5773
+% Total received flits: 46201
+% Received/Ideal flits Ratio: 1.00263
+% Average wireless utilization: 0
+% Global average delay (cycles): 21.0653
+% Max delay (cycles): 106
+% Network throughput (flits/cycle): 5.13344
+% Average IP throughput (flits/cycle/IP): 0.0802101
+% Total energy (J): 9.18961e-06
+% 	Dynamic energy (J): 1.18493e-06
+% 	Static energy (J): 8.00468e-06

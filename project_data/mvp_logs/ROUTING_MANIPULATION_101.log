@@ -1,0 +1,48 @@
+
+        SystemC 2.3.1-Accellera --- Aug 21 2026 12:53:39
+        Copyright (c) 1996-2014 by all Contributors,
+        ALL RIGHTS RESERVED
+	--------------------------------------------
+		Noxim - the NoC Simulator
+		(C) University of Catania
+	--------------------------------------------
+Catania V., Mineo A., Monteleone S., Palesi M., and Patti D. (2016) Cycle-Accurate Network on Chip Simulation with Noxim. ACM Trans. Model. Comput. Simul. 27, 1, Article 4 (August 2016), 25 pages. DOI: https://doi.org/10.1145/2953878
+
+
+Loading configuration from file "config_examples/default_config.yaml"... Done
+Loading power configurations from file "bin/power.yaml"... Done
+Reset for 1000 cycles...  done! 
+ Now running for 20000 cycles...
+ROUTING_MANIPULATION: node 6 rerouted 1 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+ROUTING_MANIPULATION: node 6 rerouted 3 -> 2
+Noxim simulation completed. (21000 cycles executed)
+
+% Total received packets: 3099
+% Total received flits: 24803
+% Received/Ideal flits Ratio: 1.01986
+% Average wireless utilization: 0
+% Global average delay (cycles): 14.6157
+% Max delay (cycles): 133
+% Network throughput (flits/cycle): 1.30542
+% Average IP throughput (flits/cycle/IP): 0.0815888
+% Total energy (J): 4.25686e-06
+% 	Dynamic energy (J): 3.06362e-07
+% 	Static energy (J): 3.9505e-06

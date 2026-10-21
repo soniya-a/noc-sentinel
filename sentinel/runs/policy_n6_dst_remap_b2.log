@@ -1,0 +1,50 @@
+
+        SystemC 2.3.1-Accellera --- Aug 21 2026 12:53:39
+        Copyright (c) 1996-2014 by all Contributors,
+        ALL RIGHTS RESERVED
+	--------------------------------------------
+		Noxim - the NoC Simulator
+		(C) University of Catania
+	--------------------------------------------
+Catania V., Mineo A., Monteleone S., Palesi M., and Patti D. (2016) Cycle-Accurate Network on Chip Simulation with Noxim. ACM Trans. Model. Comput. Simul. 27, 1, Article 4 (August 2016), 25 pages. DOI: https://doi.org/10.1145/2953878
+
+
+Loading configuration from file "config_examples/default_configMesh.yaml"... Done
+Loading power configurations from file "bin/power.yaml"... Done
+Reset for 1000 cycles... SENTINEL_CONFIG mal_node=6 attack=BLACKHOLE mitigation=1 src_policy=QUARANTINE dst_policy=REMAP backup_node=2 decouple_rng=1 trace_prefix=sentinel/runs/policy_n6_dst_remap_b2
+ done! 
+ Now running for 5000 cycles...
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 1 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 2 dst 14 dir 2 -> 1 (avoiding node 6)
+SENTINEL_HOOK: node 3 dst 14 dir 3 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 7 dst 14 dir 3 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+SENTINEL_HOOK: node 5 dst 10 dir 1 -> 2 (avoiding node 6)
+Noxim simulation completed. (6000 cycles executed)
+
+% Total received packets: 618
+% Total received flits: 4947
+% Received/Ideal flits Ratio: 0.966211
+% Average wireless utilization: 0
+% Global average delay (cycles): 13.7945
+% Max delay (cycles): 74
+% Network throughput (flits/cycle): 1.23675
+% Average IP throughput (flits/cycle/IP): 0.0772969
+% Total energy (J): 1.06138e-06
+% 	Dynamic energy (J): 7.37528e-08
+% 	Static energy (J): 9.87626e-07
+SENTINEL_SUMMARY generated=818 (remapped)=53 DELIVERED=775 IN_FLIGHT=3 PARTIAL=1 QUARANTINED_DST_BACKUP_IS_SRC=3 QUARANTINED_SRC=36 mitigation_reroute_hops=290

@@ -1,0 +1,14 @@
+attack_modes:
+- BLACKHOLE
+- SELECTIVE_FORWARDING
+- GRAYHOLE
+- ROUTING_MANIPULATION
+- DESTINATION_TAMPERING
+backup_node: 2
+mesh_height: 4
+mesh_width: 4
+pir: 0.01
+seed: 101
+simulation_cycles: 5000
+target_node: 6
+warmup_cycles: 1000

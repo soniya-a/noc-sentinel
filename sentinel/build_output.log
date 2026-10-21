@@ -1,0 +1,84 @@
+[deps] SystemC already available in /home/soniya/noxim/bin/libs/systemc-2.3.1
+[deps] yaml-cpp already available in /home/soniya/noxim/bin/libs/yaml-cpp
+[deps] Dependencies are ready under /home/soniya/noxim/bin/libs
+make: Entering directory '/home/soniya/noxim/bin'
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Buffer.cpp -o build/Buffer.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Channel.cpp -o build/Channel.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/ConfigurationManager.cpp -o build/ConfigurationManager.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/GlobalParams.cpp -o build/GlobalParams.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/GlobalRoutingTable.cpp -o build/GlobalRoutingTable.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/GlobalStats.cpp -o build/GlobalStats.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/GlobalTrafficHardcoding.cpp -o build/GlobalTrafficHardcoding.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/GlobalTrafficTable.cpp -o build/GlobalTrafficTable.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Hub.cpp -o build/Hub.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Initiator.cpp -o build/Initiator.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/LocalRoutingTable.cpp -o build/LocalRoutingTable.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Logger.cpp -o build/Logger.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/MM.cpp -o build/MM.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Main.cpp -o build/Main.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/NoC.cpp -o build/NoC.o
+../src/NoC.cpp: In member function ‘void NoC::buildButterfly()’:
+../src/NoC.cpp:774:18: warning: variable ‘tmp_NoP’ set but not used [-Wunused-but-set-variable]
+  774 |         NoP_data tmp_NoP;
+      |                  ^~~~~~~
+../src/NoC.cpp: In member function ‘void NoC::buildBaseline()’:
+../src/NoC.cpp:1511:14: warning: variable ‘tmp_NoP’ set but not used [-Wunused-but-set-variable]
+ 1511 |     NoP_data tmp_NoP;
+      |              ^~~~~~~
+../src/NoC.cpp: In member function ‘void NoC::buildOmega()’:
+../src/NoC.cpp:2148:18: warning: variable ‘tmp_NoP’ set but not used [-Wunused-but-set-variable]
+ 2148 |         NoP_data tmp_NoP;
+      |                  ^~~~~~~
+../src/NoC.cpp: In member function ‘void NoC::asciiMonitor()’:
+../src/NoC.cpp:2399:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2399 |         system("clear");
+      |         ~~~~~~^~~~~~~~~
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Power.cpp -o build/Power.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/ProcessingElement.cpp -o build/ProcessingElement.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/ReservationTable.cpp -o build/ReservationTable.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Router.cpp -o build/Router.o
+../src/Router.cpp: In member function ‘std::vector<int> Router::nextDeltaHops(RouteData)’:
+../src/Router.cpp:454:13: warning: unused variable ‘sw’ [-Wunused-variable]
+  454 |         int sw = GlobalParams::n_delta_tiles/2; //sw: switch number in each stage
+      |             ^~
+In file included from ../src/ReservationTable.h:16,
+                 from ../src/Router.h:20,
+                 from ../src/Router.cpp:11:
+../src/Utils.h:177:23: warning: ‘c’ may be used uninitialized [-Wmaybe-uninitialized]
+  177 |         id = (coord.y * GlobalParams::mesh_dim_x) + coord.x;
+      |              ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Router.cpp:456:13: note: ‘c’ was declared here
+  456 |         int c;
+      |             ^
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/SecurityTrace.cpp -o build/SecurityTrace.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Stats.cpp -o build/Stats.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/Target.cpp -o build/Target.o
+In file included from ../src/Stats.cpp:11:
+In copy constructor ‘CommHistory::CommHistory(const CommHistory&)’,
+    inlined from ‘void std::__new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = CommHistory; _Args = {const CommHistory&}; _Tp = CommHistory]’ at /usr/include/c++/15/bits/new_allocator.h:191:4,
+    inlined from ‘static void std::allocator_traits<std::allocator<_CharT> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = CommHistory; _Args = {const CommHistory&}; _Tp = CommHistory]’ at /usr/include/c++/15/bits/alloc_traits.h:674:17,
+    inlined from ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = CommHistory; _Alloc = std::allocator<CommHistory>]’ at /usr/include/c++/15/bits/stl_vector.h:1421:30,
+    inlined from ‘void Stats::receivedFlit(double, const Flit&)’ at ../src/Stats.cpp:36:17:
+../src/Stats.h:21:8: warning: ‘ch.CommHistory::last_received_flit_time’ may be used uninitialized [-Wmaybe-uninitialized]
+   21 | struct CommHistory {
+      |        ^~~~~~~~~~~
+../src/Stats.cpp: In member function ‘void Stats::receivedFlit(double, const Flit&)’:
+../src/Stats.cpp:32:21: note: ‘ch’ declared here
+   32 |         CommHistory ch;
+      |                     ^~
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/TokenRing.cpp -o build/TokenRing.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/routingAlgorithms/RoutingAlgorithms.cpp -o build/routingAlgorithms/RoutingAlgorithms.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/routingAlgorithms/Routing_DELTA.cpp -o build/routingAlgorithms/Routing_DELTA.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/routingAlgorithms/Routing_DYAD.cpp -o build/routingAlgorithms/Routing_DYAD.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/routingAlgorithms/Routing_NEGATIVE_FIRST.cpp -o build/routingAlgorithms/Routing_NEGATIVE_FIRST.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/routingAlgorithms/Routing_NORTH_LAST.cpp -o build/routingAlgorithms/Routing_NORTH_LAST.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/routingAlgorithms/Routing_ODD_EVEN.cpp -o build/routingAlgorithms/Routing_ODD_EVEN.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/routingAlgorithms/Routing_TABLE_BASED.cpp -o build/routingAlgorithms/Routing_TABLE_BASED.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/routingAlgorithms/Routing_WEST_FIRST.cpp -o build/routingAlgorithms/Routing_WEST_FIRST.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/routingAlgorithms/Routing_XY.cpp -o build/routingAlgorithms/Routing_XY.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/selectionStrategies/SelectionStrategies.cpp -o build/selectionStrategies/SelectionStrategies.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/selectionStrategies/Selection_BUFFER_LEVEL.cpp -o build/selectionStrategies/Selection_BUFFER_LEVEL.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/selectionStrategies/Selection_NOP.cpp -o build/selectionStrategies/Selection_NOP.o
+g++ -O3 -Wall -DSC_NO_WRITE_CHECK --std=c++11   -I../src -isystem libs/systemc-2.3.1/include -Ilibs/yaml-cpp/include -c ../src/selectionStrategies/Selection_RANDOM.cpp -o build/selectionStrategies/Selection_RANDOM.o
+g++ -L../src -Llibs/systemc-2.3.1/lib-linux64 -Llibs/yaml-cpp/lib build/Buffer.o build/Channel.o build/ConfigurationManager.o build/GlobalParams.o build/GlobalRoutingTable.o build/GlobalStats.o build/GlobalTrafficHardcoding.o build/GlobalTrafficTable.o build/Hub.o build/Initiator.o build/LocalRoutingTable.o build/Logger.o build/MM.o build/Main.o build/NoC.o build/Power.o build/ProcessingElement.o build/ReservationTable.o build/Router.o build/SecurityTrace.o build/Stats.o build/Target.o build/TokenRing.o build/routingAlgorithms/RoutingAlgorithms.o build/routingAlgorithms/Routing_DELTA.o build/routingAlgorithms/Routing_DYAD.o build/routingAlgorithms/Routing_NEGATIVE_FIRST.o build/routingAlgorithms/Routing_NORTH_LAST.o build/routingAlgorithms/Routing_ODD_EVEN.o build/routingAlgorithms/Routing_TABLE_BASED.o build/routingAlgorithms/Routing_WEST_FIRST.o build/routingAlgorithms/Routing_XY.o build/selectionStrategies/SelectionStrategies.o build/selectionStrategies/Selection_BUFFER_LEVEL.o build/selectionStrategies/Selection_NOP.o build/selectionStrategies/Selection_RANDOM.o -lsystemc -lm -lyaml-cpp  -o noxim 2>&1 | c++filt
+make: Leaving directory '/home/soniya/noxim/bin'

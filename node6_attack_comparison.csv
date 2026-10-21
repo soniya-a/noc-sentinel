@@ -1,0 +1,6 @@
+Node,Attack,Baseline ratio metric (%),Attack ratio metric (%),Mitigated ratio metric (%),Ratio change (percentage points),Attack delay (cycles),Mitigated delay (cycles),Attack throughput,Mitigated throughput,Attack log evidence,Mitigation route log observed
+6,Blackhole,99.2708,86.0503,93.1424,7.092,11.2447,12.2858,1.101444,1.192222,False,True
+6,Selective forwarding,99.2708,96.1198,102.5781,6.4583,11.9661,12.9119,1.230333,1.313,True,True
+6,Grayhole,99.2708,98.776,104.8872,6.1111,11.9381,13.6402,1.264333,1.342556,True,True
+6,Routing manipulation,99.2708,100.9983,103.0208,2.0226,14.6155,13.7299,1.292778,1.318667,True,True
+6,Destination tampering,99.2708,100.9462,103.0208,2.0747,13.384,14.1133,1.292111,1.318667,True,True

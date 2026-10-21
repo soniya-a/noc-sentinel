@@ -1,0 +1,31 @@
+.idea/
+other/__pycache__/
+bin/build/
+bin/libs/
+bin/noxim
+other/regression/generated/
+other/visualizer-output/
+
+# Python & Environment Exclusions
+.venv/
+__pycache__/
+*.pyc
+*.backup
+*.broken
+*.before_*
+.vscode/
+*:Zone.Identifier
+
+# Secrets & API Keys
+.env
+.env.local
+.streamlit/secrets.toml
+
+# Backups & Agent Logs
+.agent/
+.agents/
+.gemini/
+.gsd/
+*.bak_*
+backup_*/
+*.tar.gz

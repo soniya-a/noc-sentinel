@@ -1,0 +1,50 @@
+
+        SystemC 2.3.1-Accellera --- Aug 21 2026 12:53:39
+        Copyright (c) 1996-2014 by all Contributors,
+        ALL RIGHTS RESERVED
+	--------------------------------------------
+		Noxim - the NoC Simulator
+		(C) University of Catania
+	--------------------------------------------
+Catania V., Mineo A., Monteleone S., Palesi M., and Patti D. (2016) Cycle-Accurate Network on Chip Simulation with Noxim. ACM Trans. Model. Comput. Simul. 27, 1, Article 4 (August 2016), 25 pages. DOI: https://doi.org/10.1145/2953878
+
+
+Loading configuration from file "config_examples/default_configMesh.yaml"... Done
+Loading power configurations from file "bin/power.yaml"... Done
+Reset for 1000 cycles... SENTINEL_CONFIG mal_node=6 attack=DESTINATION_TAMPERING mitigation=0 src_policy=QUARANTINE dst_policy=QUARANTINE backup_node=-1 decouple_rng=1 trace_prefix=sentinel/runs/destination_tampering_n6_attack
+ done! 
+ Now running for 5000 cycles...
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+DESTINATION_TAMPERING: node 6 changed dst 10 -> 11
+Noxim simulation completed. (6000 cycles executed)
+
+% Total received packets: 647
+% Total received flits: 5177
+% Received/Ideal flits Ratio: 1.01113
+% Average wireless utilization: 0
+% Global average delay (cycles): 12.6522
+% Max delay (cycles): 61
+% Network throughput (flits/cycle): 1.29425
+% Average IP throughput (flits/cycle/IP): 0.0808906
+% Total energy (J): 1.06386e-06
+% 	Dynamic energy (J): 7.62382e-08
+% 	Static energy (J): 9.87626e-07
+SENTINEL_SUMMARY generated=818 DELIVERED=685 IN_FLIGHT=3 MISDELIVERED=128 PARTIAL=2 mitigation_reroute_hops=0
