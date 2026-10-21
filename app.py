@@ -1344,22 +1344,33 @@ def render_page1_attack():
                     st.error(f"Error loading scenario: {err}")
 
         if uploaded_file is not None:
-            try:
-                df = pd.read_csv(uploaded_file)
-            except Exception:
+            if (
+                st.session_state.uploaded_filename != uploaded_file.name
+                or st.session_state.parsed_info is None
+                or st.session_state.uploaded_file_data is None
+            ):
                 try:
-                    uploaded_file.seek(0)
-                    df = pd.DataFrame({"raw_line": [line.decode('utf-8', errors='ignore') for line in uploaded_file]})
+                    df = pd.read_csv(uploaded_file)
                 except Exception:
-                    df = pd.DataFrame({"raw_line": ["data_stream"]})
-            try:
-                parsed = parse_uploaded_telemetry(df, uploaded_file.name)
-                st.session_state.parsed_info = parsed
-                st.session_state.uploaded_file_data = df
-                st.session_state.uploaded_filename = uploaded_file.name
-                st.rerun()
-            except Exception as err:
-                st.error(f"Error parsing file: {err}")
+                    try:
+                        uploaded_file.seek(0)
+                        df = pd.DataFrame({"raw_line": [line.decode('utf-8', errors='ignore') for line in uploaded_file]})
+                    except Exception:
+                        df = pd.DataFrame({"raw_line": ["data_stream"]})
+                try:
+                    parsed = parse_uploaded_telemetry(df, uploaded_file.name)
+                    st.session_state.parsed_info = parsed
+                    st.session_state.uploaded_file_data = df
+                    st.session_state.uploaded_filename = uploaded_file.name
+                except Exception as err:
+                    st.error(f"Error parsing file: {err}")
+            st.session_state["_last_had_file"] = True
+        elif uploaded_file is None and st.session_state.get("_last_had_file", False):
+            st.session_state.parsed_info = None
+            st.session_state.uploaded_file_data = None
+            st.session_state.uploaded_filename = ""
+            st.session_state["_last_had_file"] = False
+            st.rerun()
 
     # Waiting State if no file uploaded
     if st.session_state.parsed_info is None or st.session_state.uploaded_file_data is None:
